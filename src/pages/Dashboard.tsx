@@ -10,9 +10,9 @@ export function Dashboard() {
     case "loading":
       return <LoadingState />;
     case "error":
-      return <ErrorState />
+      return <ErrorState message={leadsState.message} onRetry={() => console.log("Retry")}  />
     case "empty":
-      return <EmptyState />
+      return <EmptyState onAddLead={() => console.log("add lead")} />
     case "success":
       return (
         <div className='bg-brand-700 text-white p-4 rounded-lg'>
